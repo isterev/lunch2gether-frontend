@@ -10,7 +10,7 @@ import UserService from '../services/UserService';
 
 const style = { maxWidth: 500 };
 
-export class MovieDetail extends React.Component {
+export class GroupDetail extends React.Component {
 
     constructor(props) {
         super(props);
@@ -23,32 +23,32 @@ export class MovieDetail extends React.Component {
                     <Grid className="grid-example" >
                         <Cell size={3}>
                             <Media aspectRatio="1-1">
-                                <img src={this.props.movie.posters.detailed} alt={this.props.movie.title} />
+                                <img src={this.props.group.posters.detailed} alt={this.props.group.title} />
                             </Media>
                         </Cell>
                         <Cell size={7}/>
                         <Cell size={1}>
                             {UserService.isAuthenticated() ?
-                                <Link to={{pathname: `/edit/${this.props.movie._id}`, state : {movie : this.props.movie}}}><Button icon>mode_edit</Button></Link>
+                                <Link to={{pathname: `/edit/${this.props.group._id}`, state : {group : this.props.group}}}><Button icon>mode_edit</Button></Link>
                                 : <Link to={'/login'}><Button icon>mode_edit</Button></Link>
                             }
                         </Cell>
                         <Cell size={1}>
                             {UserService.isAuthenticated() ?
-                                <Button onClick={() => this.props.onDelete(this.props.movie._id)} icon>delete</Button>
+                                <Button onClick={() => this.props.onDelete(this.props.group._id)} icon>delete</Button>
                                 :   <Link to={'/login'}><Button icon>delete</Button></Link>
                             }
                         </Cell>
                     </Grid>
 
-                    <CardTitle title={this.props.movie.title} subtitle={this.props.movie.year} />
+                    <CardTitle title={this.props.group.title} subtitle={this.props.group.year} />
 
                     <CardText>
                         <p>
-                            {this.props.movie.mpaa_rating}
+                            {this.props.group.mpaa_rating}
                         </p>
                         <p>
-                            {this.props.movie.synopsis}
+                            {this.props.group.synopsis}
                         </p>
                     </CardText>
                 </Card>
