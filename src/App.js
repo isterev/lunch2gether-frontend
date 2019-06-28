@@ -6,6 +6,11 @@ import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { GroupListView } from './views/GroupListView';
 import { GroupDetailView }   from './views/GroupDetailView';
 import { GroupFormView }   from './views/GroupFormView';
+
+import { MyGroupListView } from './views/MyGroupListView';
+import { MyGroupDetailView }   from './views/MyGroupDetailView';
+import { MyGroupFormView }   from './views/MyGroupFormView';
+
 import { UserLoginView } from "./views/UserLoginView";
 import { UserSignupView } from "./views/UserSignupView";
 
@@ -20,18 +25,18 @@ export default class App extends React.Component {
         this.state = {
             title: 'Lunch2gether App',
             routes: [
-                { component: GroupListView , path: '/', exact: true},
-                { component: GroupDetailView , path: '/show/:id'},
+                { component: MyGroupListView , path: '/', exact: true},
+                { component: MyGroupDetailView , path: '/show/:id'},
                 { render: (props) => {
                         if(UserService.isAuthenticated()) {
-                            return (<GroupFormView {... props} />)
+                            return (<MyGroupFormView {... props} />)
                         }
                         else {
                             return (<Redirect to={'/login'}/>)
                         }} , path: '/edit/:id'},
                 { render: (props) => {
                     if(UserService.isAuthenticated()) {
-                        return (<GroupFormView {... props} />)
+                        return (<MyGroupFormView {... props} />)
                     }
                     else {
                         return (<Redirect to={'/login'}/>)

@@ -1,14 +1,19 @@
 "use strict";
 
-import React from 'react';
-import { Card, Button, FontIcon, TextField } from 'react-md';
-import { withRouter } from 'react-router-dom'
+import {Card, Button, FontIcon, TextField} from 'react-md';
+import {withRouter} from 'react-router-dom';
 
-import { AlertMessage } from './AlertMessage';
+import {AlertMessage} from './AlertMessage';
 import Page from './Page';
 
+import React, {Component} from 'react';
+import {Formik} from 'formik';
+import * as yup from 'yup';
 
-const style = { maxWidth: 500 };
+import {Form, Datepicker, Input, Textarea, SubmitBtn} from 'react-formik-ui';
+
+
+const style = {maxWidth: 500};
 
 
 class MyGroupForm extends React.Component {
@@ -16,115 +21,123 @@ class MyGroupForm extends React.Component {
     constructor(props) {
         super(props);
 
-        if(this.props.group != undefined) {
-            this.state = {
-                title : props.group.title,
-                year : props.group.year,
-                rating : props.group.mpaa_rating,
-                synopsis: props.group.synopsis
-            };
-        } else {
-            this.state = {
-                title : '',
-                year : '',
-                rating : '',
-                synopsis: ''
-            };
-        }
-
-        this.handleChangeTitle = this.handleChangeTitle.bind(this);
-        this.handleChangeYear = this.handleChangeYear.bind(this);
-        this.handleChangeRating = this.handleChangeRating.bind(this);
-        this.handleChangeSynopsis = this.handleChangeSynopsis.bind(this);
-
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
-    handleChangeTitle(value) {
-        this.setState(Object.assign({}, this.state, {title: value}));
-    }
-
-    handleChangeYear(value) {
-        this.setState(Object.assign({}, this.state, {year: value}));
-    }
-
-    handleChangeRating(value) {
-        this.setState(Object.assign({}, this.state, {rating: value}));
-    }
-
-    handleChangeSynopsis(value) {
-        this.setState(Object.assign({}, this.state, {synopsis: value}));
-    }
-
-    handleSubmit(event) {
-        event.preventDefault();
+    onSubmit(values) {
 
         let group = this.props.group;
-        if(group == undefined) {
+        if (group == undefined) {
             group = {};
         }
-
-        group.title = this.state.title;
-        group.mpaa_rating = this.state.rating;
-        group.year = this.state.year;
-        group.synopsis = this.state.synopsis;
+        group.dateFrom = values.dateFrom;
+        group.dateTo = values.dateTo;
+        group.place = values.place;
+        group.description = values.description;
+        group.maxMembers = values.maxMembers;
 
         this.props.onSubmit(group);
     }
+
+
+    // validation with yup
+    getSchema(){
+        return yup.object().shape({
+            dateFrom: yup.date()
+                .required('Start time is required')
+                .typeError("Start time is required"),
+            dateTo: yup.date()
+                .required('End time is required')
+                .typeError("End time is required"),
+            place: yup.string()
+                .required('Place is required'),
+            description: yup.string()
+                .required('Description is required'),
+            maxMembers: yup.number()
+                .required('Maximal number of members is required')
+                //.truncate()
+                .integer('Must be an integer number')
+                .positive('Must be positive')
+                .typeError("Maximal number of members is required")
+        })
+    };
 
     render() {
         return (
             <Page>
                 <Card style={style} className="md-block-centered">
-                    <form className="md-grid" onSubmit={this.handleSubmit} onReset={() => this.props.history.goBack()}>
-                        <TextField
-                            label="Title"
-                            id="TitleField"
-                            type="text"
-                            className="md-row"
-                            required={true}
-                            value={this.state.title}
-                            onChange={this.handleChangeTitle}
-                            errorText="Title is required"/>
-                        <TextField
-                            label="Year"
-                            id="YearField"
-                            type="number"
-                            className="md-row"
-                            required={true}
-                            value={this.state.year}
-                            onChange={this.handleChangeYear}
-                            errorText="Year is required"
-                            maxLength={4}/>
-                        <TextField
-                            label="Rating"
-                            id="RatingField"
-                            type="text"
-                            className="md-row"
-                            required={false}
-                            value={this.state.rating}
-                            onChange={this.handleChangeRating}/>
-                        <TextField
-                            label="Synopsis"
-                            id="SynopsisField"
-                            type="text"
-                            className="md-row"
-                            rows={5}
-                            required={true}
-                            value={this.state.synopsis}
-                            onChange={this.handleChangeSynopsis}
-                            errorText="Synopsis is required"/>
+                    <Formik
+                        initialValues={{
+                            dateFrom: '',
+                            dateTo: '',
+                            place: '',
+                            description: '',
+                            maxMembers: ''
+                        }}
+                        validationSchema={this.getSchema}
+                        onSubmit={this.onSubmit}
+                        render={() => (
+                            <Form mode='structured'>
 
-                        <Button id="submit" type="submit"
-                                disabled={this.state.year.toString().length != 4 || this.state.title == undefined || this.state.title == '' || this.state.year == undefined || this.state.year == '' || this.state.synopsis == undefined || this.state.synopsis == ''}
-                                raised primary className="md-cell md-cell--2">Save</Button>
-                        <Button id="reset" type="reset" raised secondary className="md-cell md-cell--2">Dismiss</Button>
-                        <AlertMessage className="md-row md-full-width" >{this.props.error ? `${this.props.error}` : ''}</AlertMessage>
-                    </form>
+                                <Datepicker
+                                    name='dateFrom'
+                                    label='Start Date and Time'
+                                    selectsStart
+                                    showTimeSelect
+                                    timeFormat="HH:mm"
+                                    timeIntervals={15}
+                                    dateFormat="MMMM d, yyyy h:mm aa"
+                                    timeCaption="time"
+                                    hint='Choose start date and time'
+                                    required
+                                />
+
+                                <Datepicker
+                                    name='dateTo'
+                                    label='End Date and Time'
+                                    selectsEnd
+                                    showTimeSelect
+                                    timeFormat="HH:mm"
+                                    timeIntervals={15}
+                                    dateFormat="MMMM d, yyyy h:mm aa"
+                                    timeCaption="time"
+                                    hint='Choose start date and time'
+                                    required
+                                />
+
+                                <Input
+                                    name='place'
+                                    label='Place'
+                                    hint='Denote a place to meet'
+                                    required
+                                />
+
+                                <Textarea
+                                    name='description'
+                                    label='Description'
+                                    hint='Write a description'
+                                />
+
+                                <Input
+                                    name='maxMembers'
+                                    label='Maximal Number of Members'
+                                    hint='Select the Maximal Number of Members'
+                                    required
+                                />
+
+
+                                <SubmitBtn/>
+                            </Form>
+
+
+                        )}
+                    />
                 </Card>
             </Page>
-        );
+        )
     }
+
+
 }
 
 export default withRouter(MyGroupForm);

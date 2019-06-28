@@ -74,12 +74,15 @@ export default class HttpService {
     }
 
     static post(url, data, onSuccess, onError) {
+
         let token = window.localStorage['jwtToken'];
         let header = new Headers();
         if(token) {
             header.append('Authorization', `JWT ${token}`);
         }
         header.append('Content-Type', 'application/json');
+
+        alert("url " + url);
 
         fetch(url, {
             method: 'POST',
@@ -104,6 +107,9 @@ export default class HttpService {
                 onSuccess(resp);
             }
         }).catch((e) => {
+
+            alert("post2 " + e.message + " " + JSON.stringify(data, null, 2));
+
             onError(e.message);
         });
     }

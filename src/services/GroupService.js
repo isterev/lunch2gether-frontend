@@ -61,8 +61,8 @@ export default class GroupService {
     }
 
     static createGroup(group) {
-        group.owner = UserService.getCurrentUser().id;
 
+        group.owner = UserService.getCurrentUser().id;
         return new Promise((resolve, reject) => {
             HttpService.post(GroupService.baseURL(), group, function(data) {
                 resolve(data);
