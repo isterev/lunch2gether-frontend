@@ -82,8 +82,6 @@ export default class HttpService {
         }
         header.append('Content-Type', 'application/json');
 
-        alert("url " + url);
-
         fetch(url, {
             method: 'POST',
             headers: header,
@@ -107,8 +105,6 @@ export default class HttpService {
                 onSuccess(resp);
             }
         }).catch((e) => {
-
-            alert("post2 " + e.message + " " + JSON.stringify(data, null, 2));
 
             onError(e.message);
         });

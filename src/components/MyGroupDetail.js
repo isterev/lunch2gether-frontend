@@ -37,6 +37,12 @@ export class MyGroupDetail extends React.Component {
 
     }
 
+    onDelete(group){
+        let r = confirm("Do you really want to delete this group?");
+        if (r == true)
+            this.props.onDelete(group._id);
+    }
+
     render() {
         return (
             <Page>
@@ -50,7 +56,7 @@ export class MyGroupDetail extends React.Component {
                         </Cell>
                         <Cell size={1}>
                             {UserService.isAuthenticated() ?
-                                <Button onClick={() => this.props.onDelete(this.props.group._id)} icon>delete</Button>
+                                <Button onClick={() => this.onDelete(this.props.group)} icon>delete</Button>
                                 :   <Link to={'/login'}><Button icon>delete</Button></Link>
                             }
                         </Cell>

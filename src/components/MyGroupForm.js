@@ -82,8 +82,13 @@ class MyGroupForm extends React.Component {
 
     render() {
         return (
-            <Page>
 
+            <div class="scroll">
+            <Page>
+                <br />
+                <br />
+                <br />
+                <Card style={style} className="md-block-centered">
                     <Formik
                         initialValues={{
                             dateFrom: this.state.dateFrom,
@@ -96,7 +101,7 @@ class MyGroupForm extends React.Component {
                         onSubmit={this.onSubmit}
                         render={() => (
                             <Form mode='themed'>
-
+                                <br />
                                 <Datepicker
                                     name='dateFrom'
                                     label='Start Date and Time'
@@ -107,7 +112,6 @@ class MyGroupForm extends React.Component {
                                     dateFormat="MMMM d, yyyy h:mm aa"
                                     timeCaption="time"
                                     hint='Choose start date and time'
-                                    required
                                 />
 
                                 <Datepicker
@@ -120,27 +124,24 @@ class MyGroupForm extends React.Component {
                                     dateFormat="MMMM d, yyyy h:mm aa"
                                     timeCaption="time"
                                     hint='Choose end date and time'
-                                    required
                                 />
 
                                 <Input
                                     name='place'
                                     label='Place'
-                                    hint='Denote a place to meet'
-                                    required
+                                    hint='Specify a place to meet'
                                 />
 
                                 <Textarea
                                     name='description'
                                     label='Description'
-                                    hint='Write a description'
+                                    hint='Write a detailed description'
                                 />
 
                                 <Input
                                     name='maxMembers'
                                     label='Maximal Number of Members'
-                                    hint='Select the Maximal Number of Members'
-                                    required
+                                    hint='Define the Maximal Number of Members'
                                 />
 
                                 <Button type="submit" raised primary className="md-cell md-cell--2" onClick={(() => this.form.submit())}>
@@ -154,7 +155,10 @@ class MyGroupForm extends React.Component {
 
                         )}
                     />
+                </Card>
             </Page>
+
+            </div>
         )
     }
 

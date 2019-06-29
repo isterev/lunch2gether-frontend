@@ -15,7 +15,11 @@ export class MyGroupListRow extends React.Component {
         super(props);
     }
 
-    onDelete(){}
+    onDelete(group){
+        let r = confirm("Do you really want to delete this group?");
+        if (r == true)
+            this.props.onDelete(group._id);
+    }
 
     render() {
         return (
@@ -28,7 +32,7 @@ export class MyGroupListRow extends React.Component {
                     : <TableColumn><Link to={'/login'}><FontIcon>mode_edit</FontIcon></Link></TableColumn>
                 }
                 {UserService.isAuthenticated() ?
-                    <TableColumn><Button onClick={() => this.props.onDelete(this.props.group._id)} icon>delete</Button></TableColumn>
+                    <TableColumn><Button onClick={() => this.onDelete(this.props.group)} icon>delete</Button></TableColumn>
                     : <TableColumn><Link to={'/login'}><FontIcon>delete</FontIcon></Link></TableColumn>
                 }
                 <TableColumn><Link to={`/show/${this.props.group._id}`}>More Details...</Link></TableColumn>
