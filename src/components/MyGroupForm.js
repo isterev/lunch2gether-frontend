@@ -12,6 +12,9 @@ import * as yup from 'yup';
 
 import {Form, Datepicker, Input, Textarea, SubmitBtn} from 'react-formik-ui';
 
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'
+
 
 const style = {maxWidth: 500};
 
@@ -46,10 +49,23 @@ class MyGroupForm extends React.Component {
     }
 
     onSubmit(values) {
+        confirmAlert({
+            title: 'Confirm',
+            message: "Do you really want to " + (this.isUpdate? "update" : "create") + " this group?",
+            buttons: [
+                {
+                    label: 'Yes',
+                    onClick: () => this.confirmOk(values)
+                },
+                {
+                    label: 'No'
+                }
+            ]
+        });
 
-        let r = confirm("Do you really want to " + (this.isUpdate? "update" : "create") + " this group?");
-        if (r == false)
-            return;
+    }
+
+    confirmOk(values) {
 
         let group = this.props.group;
         if (group == undefined) {

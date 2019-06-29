@@ -10,6 +10,9 @@ import UserService from '../services/UserService';
 import {Datepicker, Form, Input, SubmitBtn, Textarea} from "react-formik-ui";
 import {Formik} from "formik";
 
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'
+
 const style = { maxWidth: 500 };
 
 export class MyGroupDetail extends React.Component {
@@ -37,10 +40,20 @@ export class MyGroupDetail extends React.Component {
 
     }
 
-    onDelete(group){
-        let r = confirm("Do you really want to delete this group?");
-        if (r == true)
-            this.props.onDelete(group._id);
+    onDelete(group) {
+        confirmAlert({
+            title: 'Confirm',
+            message: "Do you really want to delete this group?",
+            buttons: [
+                {
+                    label: 'Yes',
+                    onClick: () => this.props.onDelete(group._id)
+                },
+                {
+                    label: 'No'
+                }
+            ]
+        });
     }
 
     render() {
