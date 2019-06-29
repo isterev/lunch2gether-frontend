@@ -20,20 +20,23 @@ class MyGroupForm extends React.Component {
 
     constructor(props) {
         super(props);
+        this.isUpdate = false;
 
-        if(props.group != undefined) {
+        if (props.group != undefined) {
             this.state = {
-                dateFrom : props.group.dateFrom,
-                dateTo : props.group.dateTo,
-                place : props.group.place,
+                dateFrom: props.group.dateFrom,
+                dateTo: props.group.dateTo,
+                place: props.group.place,
                 description: props.group.description,
                 maxMembers: props.group.maxMembers
             };
+            this.isUpdate = true;
+
         } else {
             this.state = {
-                dateFrom : '',
-                dateTo : '',
-                place : '',
+                dateFrom: '',
+                dateTo: '',
+                place: '',
                 description: '',
                 maxMembers: ''
             };
@@ -43,6 +46,10 @@ class MyGroupForm extends React.Component {
     }
 
     onSubmit(values) {
+
+        let r = confirm("Do you really want to " + (this.isUpdate? "update" : "create") + " this group?");
+        if (r == false)
+            return;
 
         let group = this.props.group;
         if (group == undefined) {
@@ -59,7 +66,7 @@ class MyGroupForm extends React.Component {
 
 
     // validation with yup
-    getSchema(){
+    getSchema() {
         return yup.object().shape({
             dateFrom: yup.date()
                 .required('Start time is required')
@@ -84,79 +91,81 @@ class MyGroupForm extends React.Component {
         return (
 
             <div class="scroll">
-            <Page>
-                <br />
-                <br />
-                <br />
-                <Card style={style} className="md-block-centered">
-                    <Formik
-                        initialValues={{
-                            dateFrom: this.state.dateFrom,
-                            dateTo: this.state.dateTo,
-                            place: this.state.place,
-                            description: this.state.description,
-                            maxMembers: this.state.maxMembers
-                        }}
-                        validationSchema={this.getSchema}
-                        onSubmit={this.onSubmit}
-                        render={() => (
-                            <Form mode='themed'>
-                                <br />
-                                <Datepicker
-                                    name='dateFrom'
-                                    label='Start Date and Time'
-                                    selectsStart
-                                    showTimeSelect
-                                    timeFormat="HH:mm"
-                                    timeIntervals={15}
-                                    dateFormat="MMMM d, yyyy h:mm aa"
-                                    timeCaption="time"
-                                    hint='Choose start date and time'
-                                />
+                <Page>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <Card style={style} className="md-block-centered">
+                        <Formik
+                            initialValues={{
+                                dateFrom: this.state.dateFrom,
+                                dateTo: this.state.dateTo,
+                                place: this.state.place,
+                                description: this.state.description,
+                                maxMembers: this.state.maxMembers
+                            }}
+                            validationSchema={this.getSchema}
+                            onSubmit={this.onSubmit}
+                            render={() => (
+                                <Form mode='themed'>
+                                    <br/>
+                                    <Datepicker
+                                        name='dateFrom'
+                                        label='Start Date and Time'
+                                        selectsStart
+                                        showTimeSelect
+                                        timeFormat="HH:mm"
+                                        timeIntervals={15}
+                                        dateFormat="MMMM d, yyyy h:mm aa"
+                                        timeCaption="time"
+                                        hint='Choose start date and time'
+                                    />
 
-                                <Datepicker
-                                    name='dateTo'
-                                    label='End Date and Time'
-                                    selectsEnd
-                                    showTimeSelect
-                                    timeFormat="HH:mm"
-                                    timeIntervals={15}
-                                    dateFormat="MMMM d, yyyy h:mm aa"
-                                    timeCaption="time"
-                                    hint='Choose end date and time'
-                                />
+                                    <Datepicker
+                                        name='dateTo'
+                                        label='End Date and Time'
+                                        selectsEnd
+                                        showTimeSelect
+                                        timeFormat="HH:mm"
+                                        timeIntervals={15}
+                                        dateFormat="MMMM d, yyyy h:mm aa"
+                                        timeCaption="time"
+                                        hint='Choose end date and time'
+                                    />
 
-                                <Input
-                                    name='place'
-                                    label='Place'
-                                    hint='Specify a place to meet'
-                                />
+                                    <Input
+                                        name='place'
+                                        label='Place'
+                                        hint='Specify a place to meet'
+                                    />
 
-                                <Textarea
-                                    name='description'
-                                    label='Description'
-                                    hint='Write a detailed description'
-                                />
+                                    <Textarea
+                                        name='description'
+                                        label='Description'
+                                        hint='Write a detailed description'
+                                    />
 
-                                <Input
-                                    name='maxMembers'
-                                    label='Maximal Number of Members'
-                                    hint='Define the Maximal Number of Members'
-                                />
+                                    <Input
+                                        name='maxMembers'
+                                        label='Maximal Number of Members'
+                                        hint='Define the Maximal Number of Members'
+                                    />
 
-                                <Button type="submit" raised primary className="md-cell md-cell--2" onClick={(() => this.form.submit())}>
-                                    Submit
-                                </Button>
-                                <Button type="reset" raised secondary className="md-cell md-cell--2" onClick={(() => history.go(-1))}>
-                                    Cancel
-                                </Button>
-                            </Form>
+                                    <Button type="submit" raised primary className="md-cell md-cell--2"
+                                            onClick={(() => this.form.submit())}>
+                                        Submit
+                                    </Button>
+                                    <Button type="reset" raised secondary className="md-cell md-cell--2"
+                                            onClick={(() => history.go(-1))}>
+                                        Cancel
+                                    </Button>
+                                </Form>
 
 
-                        )}
-                    />
-                </Card>
-            </Page>
+                            )}
+                        />
+                    </Card>
+                </Page>
 
             </div>
         )
