@@ -29,6 +29,8 @@ export class MyGroupListView extends React.Component {
                 loading: false
             });
         }).catch((e) => {
+
+            alert("load " + e);
             console.error(e);
         });
     }

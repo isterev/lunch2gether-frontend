@@ -21,6 +21,24 @@ class MyGroupForm extends React.Component {
     constructor(props) {
         super(props);
 
+        if(props.group != undefined) {
+            this.state = {
+                dateFrom : props.group.dateFrom,
+                dateTo : props.group.dateTo,
+                place : props.group.place,
+                description: props.group.description,
+                maxMembers: props.group.maxMembers
+            };
+        } else {
+            this.state = {
+                dateFrom : '',
+                dateTo : '',
+                place : '',
+                description: '',
+                maxMembers: ''
+            };
+        }
+
         this.onSubmit = this.onSubmit.bind(this);
     }
 
@@ -65,19 +83,19 @@ class MyGroupForm extends React.Component {
     render() {
         return (
             <Page>
-                <Card style={style} className="md-block-centered">
+
                     <Formik
                         initialValues={{
-                            dateFrom: '',
-                            dateTo: '',
-                            place: '',
-                            description: '',
-                            maxMembers: ''
+                            dateFrom: this.state.dateFrom,
+                            dateTo: this.state.dateTo,
+                            place: this.state.place,
+                            description: this.state.description,
+                            maxMembers: this.state.maxMembers
                         }}
                         validationSchema={this.getSchema}
                         onSubmit={this.onSubmit}
                         render={() => (
-                            <Form mode='structured'>
+                            <Form mode='themed'>
 
                                 <Datepicker
                                     name='dateFrom'
@@ -101,7 +119,7 @@ class MyGroupForm extends React.Component {
                                     timeIntervals={15}
                                     dateFormat="MMMM d, yyyy h:mm aa"
                                     timeCaption="time"
-                                    hint='Choose start date and time'
+                                    hint='Choose end date and time'
                                     required
                                 />
 
@@ -125,14 +143,17 @@ class MyGroupForm extends React.Component {
                                     required
                                 />
 
-
-                                <SubmitBtn/>
+                                <Button type="submit" raised primary className="md-cell md-cell--2" onClick={(() => this.form.submit())}>
+                                    Submit
+                                </Button>
+                                <Button type="reset" raised secondary className="md-cell md-cell--2" onClick={(() => history.go(-1))}>
+                                    Cancel
+                                </Button>
                             </Form>
 
 
                         )}
                     />
-                </Card>
             </Page>
         )
     }

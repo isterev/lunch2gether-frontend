@@ -15,17 +15,16 @@ export const MyGroupList = ({data, onDelete}) => (
         <DataTable plain style={dataTableStyle}>
             <TableHeader>
                 <TableRow>
-                    <TableColumn></TableColumn>
                     <TableColumn>Date/ Time</TableColumn>
                     <TableColumn>Place</TableColumn>
                     <TableColumn>Members</TableColumn>
-                    <TableColumn>More Details</TableColumn>
                     <TableColumn>Edit</TableColumn>
                     <TableColumn>Remove</TableColumn>
+                    <TableColumn>More Details</TableColumn>
                 </TableRow>
             </TableHeader>
             <TableBody>
-                {data.map((group, i) => <GroupListRow key={i} group={group} onDelete={(id) => onDelete(id)} />)}
+                {data.map((group, i) => <MyGroupListRow key={i} group={group} onDelete={(id) => onDelete(id)} />)}
             </TableBody>
         </DataTable>
     </Page>
