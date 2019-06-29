@@ -21,7 +21,7 @@ export class MyGroupListView extends React.Component {
             loading: true
         });
 
-        GroupService.getGroups().then((data) => {
+        GroupService.getMyGroups().then((data) => {
             this.setState({
                 data: [...data],
                 loading: false

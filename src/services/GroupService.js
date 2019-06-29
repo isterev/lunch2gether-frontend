@@ -35,6 +35,22 @@ export default class GroupService {
         });
     }
 
+    static getMyGroups() {
+        let id = UserService.getCurrentUser().id;
+        return new Promise((resolve, reject) => {
+            HttpService.get(`${GroupService.baseURL()}/myGroups/${id}`, function(data) {
+                if(data != undefined || Object.keys(data).length !== 0) {
+                    resolve(data);
+                }
+                else {
+                    reject('Error while retrieving group');
+                }
+            }, function(textStatus) {
+                reject(textStatus);
+            });
+        });
+    }
+
     static deleteGroup(id) {
         return new Promise((resolve, reject) => {
             HttpService.remove(`${GroupService.baseURL()}/${id}`, function(data) {

@@ -12,6 +12,7 @@ export class MyGroupListRow extends React.Component {
 
     constructor(props) {
         super(props);
+        this.userId = UserService.getCurrentUser().id;
     }
 
     onDelete(group) {
@@ -36,14 +37,17 @@ export class MyGroupListRow extends React.Component {
                 <TableColumn>{new Date(this.props.group.dateFrom).toLocaleString()} -  {new Date(this.props.group.dateTo).toLocaleString()}</TableColumn>
                 <TableColumn>{this.props.group.place}</TableColumn>
                 <TableColumn> {this.props.group.members.length}/{this.props.group.maxMembers}</TableColumn>
-                {UserService.isAuthenticated() ?
+
+                { UserService.isAuthenticated() && this.userId === this.props.group.owner ?
                     <TableColumn><Link to={`/edit/${this.props.group._id}`}><FontIcon>mode_edit</FontIcon></Link></TableColumn>
-                    : <TableColumn><Link to={'/login'}><FontIcon>mode_edit</FontIcon></Link></TableColumn>
+                    : <TableColumn><br /></TableColumn>
                 }
-                {UserService.isAuthenticated() ?
+
+                { UserService.isAuthenticated() && this.userId === this.props.group.owner ?
                     <TableColumn><Button onClick={() => this.onDelete(this.props.group)} icon>delete</Button></TableColumn>
-                    : <TableColumn><Link to={'/login'}><FontIcon>delete</FontIcon></Link></TableColumn>
+                    : <TableColumn><br /></TableColumn>
                 }
+
                 <TableColumn><Link to={`/show/${this.props.group._id}`}>More Details...</Link></TableColumn>
 
             </TableRow>

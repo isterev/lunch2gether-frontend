@@ -1,36 +1,38 @@
 "use strict";
 
 import React from 'react';
-import { Link } from 'react-router-dom'
-import { Card, CardTitle, CardText, Grid, Cell, Button } from 'react-md';
+import {Link} from 'react-router-dom'
+import {Card, CardTitle, CardText, Grid, Cell, Button, TableColumn, FontIcon} from 'react-md';
 import {Datepicker, Form, Input, Textarea} from "react-formik-ui";
 import {Formik} from "formik";
-import { confirmAlert } from 'react-confirm-alert';
+import {confirmAlert} from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css'
 
 import Page from './Page';
 import UserService from '../services/UserService';
 
-const style = { maxWidth: 500 };
+const style = {maxWidth: 500};
 
 export class MyGroupDetail extends React.Component {
 
     constructor(props) {
         super(props);
 
-        if(props.group != undefined) {
+        this.userId = UserService.getCurrentUser().id;
+
+        if (props.group != undefined) {
             this.state = {
-                dateFrom : props.group.dateFrom,
-                dateTo : props.group.dateTo,
-                place : props.group.place,
+                dateFrom: props.group.dateFrom,
+                dateTo: props.group.dateTo,
+                place: props.group.place,
                 description: props.group.description,
                 maxMembers: props.group.maxMembers
             };
         } else {
             this.state = {
-                dateFrom : '',
-                dateTo : '',
-                place : '',
+                dateFrom: '',
+                dateTo: '',
+                place: '',
                 description: '',
                 maxMembers: ''
             };
@@ -58,22 +60,25 @@ export class MyGroupDetail extends React.Component {
         return (
             <Page>
                 <Card style={style} className="md-block-centered">
-                    <Grid className="grid-example" >
-                        <Cell size={1}>
-                            {UserService.isAuthenticated() ?
-                                <Link to={{pathname: `/edit/${this.props.group._id}`, state : {group : this.props.group}}}><Button icon>mode_edit</Button></Link>
-                                : <Link to={'/login'}><Button icon>mode_edit</Button></Link>
-                            }
-                        </Cell>
-                        <Cell size={1}>
-                            {UserService.isAuthenticated() ?
-                                <Button onClick={() => this.onDelete(this.props.group)} icon>delete</Button>
-                                :   <Link to={'/login'}><Button icon>delete</Button></Link>
-                            }
-                        </Cell>
-                    </Grid>
 
-                    <CardTitle title={"Group Details"} />
+                    {UserService.isAuthenticated() && this.userId === this.props.group.owner ?
+
+                        <Grid className="grid-example">
+                            <Cell size={1}>
+                                <Link to={{
+                                    pathname: `/edit/${this.props.group._id}`,
+                                    state: {group: this.props.group}
+                                }}><Button icon>mode_edit</Button></Link>
+                            </Cell>
+                            <Cell size={1}>
+                                <Button onClick={() => this.onDelete(this.props.group)} icon>delete</Button>
+                            </Cell>
+                        </Grid>
+
+                        : ""
+                    }
+
+                    <CardTitle title={"Group Details"}/>
 
                     <CardText>
                         <Formik
@@ -131,7 +136,8 @@ export class MyGroupDetail extends React.Component {
                                         disabled
                                     />
 
-                                    <Button type="reset" raised secondary className="md-cell md-cell--2" onClick={(() => history.go(-1))}>
+                                    <Button type="reset" raised secondary className="md-cell md-cell--2"
+                                            onClick={(() => history.go(-1))}>
                                         Back
                                     </Button>
 
