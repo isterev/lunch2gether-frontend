@@ -3,7 +3,6 @@
 import React from 'react';
 
 import { MyGroupDetail } from '../components/MyGroupDetail';
-
 import GroupService from '../services/GroupService';
 
 

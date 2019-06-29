@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { Card, CardTitle, CardText, Grid, Cell, Button } from 'react-md';
 import {Datepicker, Form, Input, Textarea} from "react-formik-ui";
 import {Formik} from "formik";
-import { confirmAlert } from 'react-confirm-alert'; // Import
+import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css'
 
 import Page from './Page';

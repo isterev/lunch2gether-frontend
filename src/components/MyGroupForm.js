@@ -6,7 +6,7 @@ import React from 'react';
 import {Formik} from 'formik';
 import * as yup from 'yup';
 import {Form, Datepicker, Input, Textarea} from 'react-formik-ui';
-import { confirmAlert } from 'react-confirm-alert'; // Import
+import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css'
 
 import Page from './Page';

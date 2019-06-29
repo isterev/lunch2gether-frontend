@@ -3,10 +3,10 @@
 import React from 'react';
 import { TableRow, TableColumn, FontIcon, Button } from 'react-md';
 import { Link } from 'react-router-dom';
+import {confirmAlert} from "react-confirm-alert";
+import 'react-confirm-alert/src/react-confirm-alert.css'
 
 import UserService from '../services/UserService';
-import {confirmAlert} from "react-confirm-alert";
-
 
 export class MyGroupListRow extends React.Component {
 

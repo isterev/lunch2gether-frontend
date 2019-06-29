@@ -3,9 +3,7 @@
 import React from 'react';
 
 import MyGroupForm from './../components/MyGroupForm';
-
 import GroupService from '../services/GroupService';
-
 
 export class MyGroupFormView extends React.Component {
 

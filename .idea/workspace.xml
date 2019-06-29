@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beac3364-0857-474d-8963-b0654a60d7ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Confirm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConfirmTest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConfirmTest2.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyGroupDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyGroupDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyGroupForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyGroupForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyGroupList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyGroupList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyGroupListRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyGroupListRow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/MyGroupDetailView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MyGroupDetailView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/MyGroupFormView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MyGroupFormView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/MyGroupListView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MyGroupListView.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,35 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/MyGroupFormView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/MyGroupDetailView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/MyGroupListRow.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/MyGroupDetail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="144">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#15#41#0" expanded="true" />
               </folding>
@@ -62,10 +35,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/HttpService.js">
+        <entry file="file://$PROJECT_DIR$/src/views/MyGroupDetailView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1926">
-              <caret line="109" column="11" selection-start-line="109" selection-start-column="11" selection-end-line="109" selection-end-column="11" />
+            <state relative-caret-position="96">
+              <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/MyGroupListRow.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#15#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/MyGroupDetail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+              <folding>
+                <element signature="e#15#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,12 +79,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MyGroupForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#15#53#0" expanded="true" />
-                <element signature="e#314#370#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="96">
+              <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -95,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/MyGroupListView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-562">
-              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            <state relative-caret-position="144">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#15#41#0" expanded="true" />
               </folding>
@@ -142,22 +162,23 @@
         <option value="$PROJECT_DIR$/src/components/GroupList.js" />
         <option value="$PROJECT_DIR$/src/components/GroupForm.js" />
         <option value="$PROJECT_DIR$/src/views/GroupDetailView.js" />
-        <option value="$PROJECT_DIR$/src/views/MyGroupDetailView.js" />
         <option value="$PROJECT_DIR$/src/components/MyGroupForm_test.js" />
         <option value="$PROJECT_DIR$/src/components/MyGroupForm_v0.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/views/MyGroupFormView.js" />
         <option value="$PROJECT_DIR$/src/services/GroupService.js" />
         <option value="$PROJECT_DIR$/src/components/MovieForm.js" />
         <option value="$PROJECT_DIR$/src/components/Confirm.js" />
         <option value="$PROJECT_DIR$/src/components/ConfirmTest.js" />
-        <option value="$PROJECT_DIR$/src/views/MyGroupListView.js" />
         <option value="$PROJECT_DIR$/src/services/HttpService.js" />
         <option value="$PROJECT_DIR$/src/components/ConfirmTest2.js" />
-        <option value="$PROJECT_DIR$/src/components/MyGroupDetail.js" />
-        <option value="$PROJECT_DIR$/src/components/MyGroupForm.js" />
         <option value="$PROJECT_DIR$/src/components/MyGroupList.js" />
         <option value="$PROJECT_DIR$/src/components/MyGroupListRow.js" />
+        <option value="$PROJECT_DIR$/src/views/MyGroupListView.js" />
+        <option value="$PROJECT_DIR$/src/views/MyGroupFormView.js" />
+        <option value="$PROJECT_DIR$/src/views/MyGroupDetailView.js" />
+        <option value="$PROJECT_DIR$/src/components/MyGroupForm.js" />
+        <option value="$PROJECT_DIR$/src/components/MyGroupDetail.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
       </list>
     </option>
   </component>
@@ -181,6 +202,31 @@
             <path>
               <item name="lunch2gether-frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="lunch2gether-frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lunch2gether-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lunch2gether-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lunch2gether-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lunch2gether-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="react-md" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lunch2gether-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lunch2gether-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="react-md" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lunch2gether-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lunch2gether-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="react-md" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lunch2gether-frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -280,12 +326,12 @@
       <workItem from="1561483104696" duration="8445000" />
       <workItem from="1561567565796" duration="15656000" />
       <workItem from="1561679306265" duration="18446000" />
-      <workItem from="1561762764433" duration="27605000" />
+      <workItem from="1561762764433" duration="29129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73419000" />
+    <option name="totallyTimeSpent" value="74943000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -344,12 +390,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/MyGroupFormView.js</url>
-          <line>50</line>
+          <line>48</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/MyGroupFormView.js</url>
-          <line>51</line>
+          <line>49</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -394,13 +440,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/MyGroupListView.js</url>
-          <line>25</line>
+          <line>23</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/MyGroupListView.js</url>
-          <line>31</line>
+          <line>29</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
@@ -518,14 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="346" column="34" selection-start-line="346" selection-start-column="34" selection-end-line="346" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -682,30 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
-          <folding>
-            <element signature="e#15#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/UserSignupView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-399" />
@@ -716,34 +730,10 @@
         <state relative-caret-position="-348" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/MyGroupListView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-562">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding>
-            <element signature="e#15#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/HttpService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1926">
           <caret line="109" column="11" selection-start-line="109" selection-start-column="11" selection-end-line="109" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/MyGroupFormView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/MyGroupDetailView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -777,23 +767,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MyGroupDetail.js">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="54">
+            <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/MyGroupListView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        <state relative-caret-position="144">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#15#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MyGroupForm.js">
+    <entry file="file://$PROJECT_DIR$/src/views/MyGroupFormView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="144">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           <folding>
-            <element signature="e#15#53#0" expanded="true" />
-            <element signature="e#314#370#0" expanded="true" />
+            <element signature="e#15#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/MyGroupDetailView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MyGroupListRow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#15#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -805,10 +821,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MyGroupListRow.js">
+    <entry file="file://$PROJECT_DIR$/src/components/MyGroupDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MyGroupForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
-          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+          <folding>
+            <element signature="e#15#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>

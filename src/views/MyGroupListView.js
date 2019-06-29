@@ -3,9 +3,7 @@
 import React from 'react';
 
 import { MyGroupList } from '../components/MyGroupList';
-
 import GroupService from '../services/GroupService';
-
 
 export class MyGroupListView extends React.Component {
 
