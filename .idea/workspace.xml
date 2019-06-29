@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beac3364-0857-474d-8963-b0654a60d7ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Confirm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConfirmTest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConfirmTest2.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyGroupDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyGroupDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyGroupForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyGroupForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MyGroupList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyGroupList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyGroupListRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyGroupListRow.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -42,11 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/MyGroupListRow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-              <folding>
-                <element signature="e#15#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="48">
+              <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -54,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MyGroupDetail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="56" column="5" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="56" selection-end-column="5" />
+            <state relative-caret-position="102">
+              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding>
                 <element signature="e#15#41#0" expanded="true" />
               </folding>
@@ -75,47 +73,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MyGroupForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="288">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
-                <element signature="e#15#74#0" expanded="true" />
+                <element signature="e#15#53#0" expanded="true" />
+                <element signature="e#314#370#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ConfirmTest.js">
+        <entry file="file://$PROJECT_DIR$/src/components/MyGroupList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="30" column="79" selection-start-line="30" selection-start-column="79" selection-end-line="30" selection-end-column="79" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ConfirmTest2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="55" column="33" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Confirm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="72">
+              <caret line="3" column="65" lean-forward="true" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -177,14 +149,14 @@
         <option value="$PROJECT_DIR$/src/views/MyGroupFormView.js" />
         <option value="$PROJECT_DIR$/src/services/GroupService.js" />
         <option value="$PROJECT_DIR$/src/components/MovieForm.js" />
-        <option value="$PROJECT_DIR$/src/components/MyGroupList.js" />
         <option value="$PROJECT_DIR$/src/components/Confirm.js" />
         <option value="$PROJECT_DIR$/src/components/ConfirmTest.js" />
         <option value="$PROJECT_DIR$/src/views/MyGroupListView.js" />
         <option value="$PROJECT_DIR$/src/services/HttpService.js" />
         <option value="$PROJECT_DIR$/src/components/ConfirmTest2.js" />
-        <option value="$PROJECT_DIR$/src/components/MyGroupForm.js" />
         <option value="$PROJECT_DIR$/src/components/MyGroupDetail.js" />
+        <option value="$PROJECT_DIR$/src/components/MyGroupForm.js" />
+        <option value="$PROJECT_DIR$/src/components/MyGroupList.js" />
         <option value="$PROJECT_DIR$/src/components/MyGroupListRow.js" />
       </list>
     </option>
@@ -308,12 +280,12 @@
       <workItem from="1561483104696" duration="8445000" />
       <workItem from="1561567565796" duration="15656000" />
       <workItem from="1561679306265" duration="18446000" />
-      <workItem from="1561762764433" duration="27034000" />
+      <workItem from="1561762764433" duration="27605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72848000" />
+    <option name="totallyTimeSpent" value="73419000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -382,22 +354,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/MyGroupForm.js</url>
-          <line>69</line>
+          <line>64</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/MyGroupForm.js</url>
-          <line>67</line>
+          <line>62</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/MyGroupForm.js</url>
-          <line>73</line>
+          <line>68</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/MyGroupForm.js</url>
-          <line>84</line>
+          <line>79</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -710,16 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MyGroupList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-          <folding>
-            <element signature="e#15#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -815,33 +777,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MyGroupForm.js">
+    <entry file="file://$PROJECT_DIR$/src/components/MyGroupDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="102">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding>
-            <element signature="e#15#74#0" expanded="true" />
+            <element signature="e#15#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MyGroupDetail.js">
+    <entry file="file://$PROJECT_DIR$/src/components/MyGroupForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="56" column="5" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="56" selection-end-column="5" />
+        <state relative-caret-position="288">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
-            <element signature="e#15#41#0" expanded="true" />
+            <element signature="e#15#53#0" expanded="true" />
+            <element signature="e#314#370#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MyGroupList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="65" lean-forward="true" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MyGroupListRow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="e#15#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="48">
+          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
         </state>
       </provider>
     </entry>

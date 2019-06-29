@@ -1,20 +1,15 @@
 "use strict";
 
-import {Card, Button, FontIcon, TextField} from 'react-md';
+import {Card, Button} from 'react-md';
 import {withRouter} from 'react-router-dom';
-
-import {AlertMessage} from './AlertMessage';
-import Page from './Page';
-
-import React, {Component} from 'react';
+import React from 'react';
 import {Formik} from 'formik';
 import * as yup from 'yup';
-
-import {Form, Datepicker, Input, Textarea, SubmitBtn} from 'react-formik-ui';
-
+import {Form, Datepicker, Input, Textarea} from 'react-formik-ui';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'
 
+import Page from './Page';
 
 const style = {maxWidth: 500};
 

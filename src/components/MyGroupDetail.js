@@ -2,16 +2,14 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { Card, CardTitle, CardText, Media, MediaOverlay, Grid, Cell, Button, FontIcon } from 'react-md';
-
-import Page from './Page';
-
-import UserService from '../services/UserService';
-import {Datepicker, Form, Input, SubmitBtn, Textarea} from "react-formik-ui";
+import { Card, CardTitle, CardText, Grid, Cell, Button } from 'react-md';
+import {Datepicker, Form, Input, Textarea} from "react-formik-ui";
 import {Formik} from "formik";
-
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'
+
+import Page from './Page';
+import UserService from '../services/UserService';
 
 const style = { maxWidth: 500 };
 

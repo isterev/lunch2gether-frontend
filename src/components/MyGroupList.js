@@ -1,7 +1,7 @@
 "use strict";
 
 import React from 'react';
-import { DataTable, TableHeader, TableBody, TableRow, TableColumn, Button } from 'react-md';
+import { DataTable, TableHeader, TableBody, TableRow, TableColumn } from 'react-md';
 
 import { MyGroupListRow } from './MyGroupListRow';
 import Page from './Page'
