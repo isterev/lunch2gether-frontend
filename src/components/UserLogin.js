@@ -6,9 +6,16 @@ import { withRouter, Link } from 'react-router-dom';
 
 import { AlertMessage } from './AlertMessage';
 import Page from './Page';
+import Styled from "styled-components";
+import {Picture} from 'react-responsive-picture';
 
 
-const style = { maxWidth: 500 };
+const style = {
+    maxWidth: 500,
+    backgroundColor: 'rgb(255, 255, 255, 0.7)',
+    margintop: 'auto',
+    marginbottom: 'auto',
+};
 
 
 class UserLogin extends React.Component {
@@ -48,8 +55,15 @@ class UserLogin extends React.Component {
 
     render() {
         return (
+
             <Page>
-                <Card style={style} className="md-block-centered">
+
+            <div style={divSty}>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                <Card style={style} className="md-block-centered" >
                     <form className="md-grid" onSubmit={this.handleSubmit} onReset={() => this.props.history.goBack()}>
                         <TextField
                             label="Login"
@@ -77,10 +91,55 @@ class UserLogin extends React.Component {
                         <Link to={'/register'} className="md-cell">Not registered yet?</Link>
                         <AlertMessage className="md-row md-full-width" >{this.props.error ? `${this.props.error}` : ''}</AlertMessage>
                     </form>
+
                 </Card>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+            </div>
+
             </Page>
+
+
         );
+
+
     }
 };
+
+const divSty ={
+    color: 'green',
+    backgroundImage: 'url(https://imgp1.schaer.com/sites/default/files/2016-08/HeaderArticle31_Freunde%20essen%20zusammen.jpg)',
+    WebkitTransition: 'all',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    height: '100',
+    fontFamily: '"Numans", sans-serif',
+
+};
+/*
+const style2 = theme =>({
+    multilineColor:{
+        color: 'black'
+    }
+
+
+});
+
+
+export const UserLogin2 = Styled(UserLogin)`
+
+    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+
+https://imgp1.schaer.com/sites/default/files/2016-08/HeaderArticle31_Freunde%20essen%20zusammen.jpg
+
+
+
+}`;*/
 
 export default withRouter(UserLogin);
