@@ -8,7 +8,10 @@ import { AlertMessage } from './AlertMessage';
 import Page from './Page';
 
 
-const style = { maxWidth: 500 };
+const style = {
+    maxWidth: 500,
+    backgroundColor: 'rgb(255, 255, 255, 0.7)',
+    borderRadius: '25px', };
 
 
 class UserSignup extends React.Component {
@@ -49,6 +52,7 @@ class UserSignup extends React.Component {
     render() {
         return (
             <Page>
+                <br/><br/><br/><br/>
                 <Card style={style} className="md-block-centered">
                     <form className="md-grid" onSubmit={this.handleSubmit} onReset={() => this.props.history.goBack()}>
                         <TextField
@@ -77,6 +81,7 @@ class UserSignup extends React.Component {
                         <AlertMessage className="md-row md-full-width" >{this.props.error ? `${this.props.error}` : ''}</AlertMessage>
                     </form>
                 </Card>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </Page>
         );
     }

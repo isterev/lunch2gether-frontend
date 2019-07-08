@@ -13,8 +13,7 @@ import {Picture} from 'react-responsive-picture';
 const style = {
     maxWidth: 500,
     backgroundColor: 'rgb(255, 255, 255, 0.7)',
-    margintop: 'auto',
-    marginbottom: 'auto',
+    borderRadius: '25px',
 };
 
 
@@ -97,6 +96,7 @@ class UserLogin extends React.Component {
 
 
 
+
             </div>
 
             </Page>
@@ -109,14 +109,10 @@ class UserLogin extends React.Component {
 };
 
 const divSty ={
-    color: 'green',
     backgroundImage: 'url(https://imgp1.schaer.com/sites/default/files/2016-08/HeaderArticle31_Freunde%20essen%20zusammen.jpg)',
-    WebkitTransition: 'all',
     backgroundSize: 'cover',
+    //backgroundSize: '100% 100%',  //adjust the size of the picture
     backgroundRepeat: 'no-repeat',
-    height: '100',
-    fontFamily: '"Numans", sans-serif',
-
 };
 /*
 const style2 = theme =>({

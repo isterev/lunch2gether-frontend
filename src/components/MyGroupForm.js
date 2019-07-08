@@ -11,7 +11,9 @@ import 'react-confirm-alert/src/react-confirm-alert.css'
 
 import Page from './Page';
 
-const style = {maxWidth: 500};
+const style = {maxWidth: 500,
+                backgroundColor: 'rgb(0, 0, 0, 0)',
+                };
 
 
 class MyGroupForm extends React.Component {
@@ -103,10 +105,13 @@ class MyGroupForm extends React.Component {
 
             <div class="scroll">
                 <Page>
+                    <div style={divSty}>
                     <br/>
                     <br/>
                     <br/>
-                    <Card style={style} className="md-block-centered">
+                    <Card style={{maxWidth: 550, backgroundColor: 'rgb(255, 255, 255, 0.7)', borderRadius: '25px',}} className="md-block-centered">
+                    <br/>
+                        <Card style={style} className="md-block-centered">
                         <Formik
                             initialValues={{
                                 dateFrom: this.state.dateFrom,
@@ -170,12 +175,18 @@ class MyGroupForm extends React.Component {
                                             onClick={(() => history.go(-1))}>
                                         Cancel
                                     </Button>
+                                    <br/><br/>
+
                                 </Form>
 
 
                             )}
                         />
                     </Card>
+                        <br/>
+                    </Card>
+                        <br/><br/><br/><br/><br/><br/><br/><br/>
+                    </div>
                 </Page>
 
             </div>
@@ -184,5 +195,12 @@ class MyGroupForm extends React.Component {
 
 
 }
+
+const divSty ={
+    backgroundImage: 'url(https://imgp1.schaer.com/sites/default/files/2016-08/HeaderArticle31_Freunde%20essen%20zusammen.jpg)',
+    //backgroundSize: 'cover',
+    backgroundSize: '100% 100%',
+    backgroundRepeat: 'no-repeat',
+};
 
 export default withRouter(MyGroupForm);
